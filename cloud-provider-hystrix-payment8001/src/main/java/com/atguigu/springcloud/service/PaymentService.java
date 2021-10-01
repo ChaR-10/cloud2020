@@ -23,11 +23,11 @@ public class PaymentService {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "3000")  //3秒钟以内就是正常的业务逻辑
     })
     public String paymentInfo_TimeOut(Integer id){
-        // int timeNumber = 5;
-        int age = 10/0;
-        // try { TimeUnit.SECONDS.sleep(timeNumber); }catch (Exception e) {e.printStackTrace();}
-        //return "线程池："+Thread.currentThread().getName()+"   paymentInfo_TimeOut,id：  "+id+"\t"+"O(∩_∩)O哈哈~"+" 耗时(秒)"+timeNumber;
-        return "线程池："+Thread.currentThread().getName()+"   paymentInfo_TimeOut,id：  "+id+"\t"+"O(∩_∩)O哈哈~"+" 耗时(秒)";
+         int timeNumber = 5;
+//        int age = 10/0;
+         try { TimeUnit.SECONDS.sleep(timeNumber); }catch (Exception e) {e.printStackTrace();}
+        return "线程池："+Thread.currentThread().getName()+"   paymentInfo_TimeOut,id：  "+id+"\t"+"O(∩_∩)O哈哈~"+" 耗时(秒)"+timeNumber;
+//        return "线程池："+Thread.currentThread().getName()+"   paymentInfo_TimeOut,id：  "+id+"\t"+"O(∩_∩)O哈哈~"+" 耗时(秒)";
 
     }
 
