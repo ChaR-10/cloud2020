@@ -15,12 +15,14 @@ spring:
           predicates:
             - Path=/payment/get/**   #断言,路径相匹配的进行路由
 
+
         - id: payment_routh2
 #          uri: http://localhost:8001
           uri: lb://cloud-payment-service
           predicates:
             - Path=/payment/lb/**   #断言,路径相匹配的进行路由
-
+#            - After=2021-10-03T18:36:07.839+08:00[Asia/Shanghai]
+#            - Cookie=username,charlie    #并且Cookie是username=charlie才能访问
 
 eureka:
   instance:
