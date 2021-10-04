@@ -22,3 +22,11 @@ management:
     web:
       exposure:
         include: "*"
+#SpringCloud Bus动态刷新定点通知 公式：http://localhost:配置中心的端口号/actuator/bus-refresh/{destination}
+#例如 只通知3355，curl -X POST "http://localhost:3344/actuator/bus-refresh/config-client:3355"
+##rabbitmq相关配置,暴露bus刷新配置的端点
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest

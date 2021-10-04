@@ -15,3 +15,18 @@ eureka:
   client:
     service-url:
       defaultZone:  http://localhost:7001/eureka,http://localhost:7002/eureka
+
+##rabbitmq相关配置,暴露bus刷新配置的端点 SpringCloud Bus动态刷新全局广播
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
+
+
+#rabbitmq相关配置
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
